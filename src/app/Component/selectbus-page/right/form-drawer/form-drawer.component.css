@@ -1,0 +1,32 @@
+
+.proceedButton {
+    width: 100%;
+    height: 40px;
+    padding: 6px 39px 7px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    transition: 0.1s;
+    border: none;
+    text-align: center;
+    background-color: #d84e55;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    
+  }
+  .example-container {
+    width: 500px;
+    height: 500px;
+    background-color: transparent;
+  }
+  ::ng-deep .mat-drawer-container{
+    background-color: transparent;
+  }
+  ::ng-deep mat-drawer {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }

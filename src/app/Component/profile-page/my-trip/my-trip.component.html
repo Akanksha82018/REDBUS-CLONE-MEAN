@@ -1,0 +1,33 @@
+<div class="tripContainer">
+  <div class="SingleTrip__image">
+    <img [src]="randomimage" alt="Trip Image" />
+  </div>
+
+  <div class="tripDetailsWrapper">
+    <!-- Bus Details -->
+    <div class="SingleTrip__busdetails">
+      <div class="heading">Bus Details</div>
+      <p><span class="material-icons">radio_button_checked</span> Departure Location: {{ booking?.departureDetails?.city }}</p>
+      <p><span class="material-icons">radio_button_checked</span> Departure Time: {{ booking?.departureDetails?.time }}</p>
+      <p><span class="material-icons">radio_button_checked</span> Departure Date: {{ booking?.departureDetails?.date }}</p>
+      <p><span class="material-icons">radio_button_checked</span> Arrival Location: {{ booking?.arrivalDetails?.city }}</p>
+      <p><span class="material-icons">radio_button_checked</span> Arrival Time: {{ booking?.arrivalDetails?.time }}</p>
+      <p><span class="material-icons">radio_button_checked</span> Arrival Date: {{ booking?.arrivalDetails?.date }}</p>
+      <p><span class="material-icons">radio_button_checked</span> Total Fare: ₹{{ booking?.fare }}</p>
+    </div>
+
+    <!-- Passenger Details -->
+    <div class="SingleTrip__persondetails">
+      <div class="heading">Passenger Details</div>
+      <p><span class="material-icons">arrow_right_alt</span> Contact Email: {{ booking?.email }}</p>
+      <p><span class="material-icons">arrow_right_alt</span> Contact Phone Number: {{ booking?.phoneNumber }}</p>
+      <p><span class="material-icons">arrow_right_alt</span> Name: {{booking?. passengername }}</p>
+        <p><span class="material-icons">arrow_right_alt</span> Gender: {{booking?. passengergender }}</p>
+        <p><span class="material-icons">arrow_right_alt</span> Age: {{booking?. passengerage }}</p>
+
+      <div class="SingleTrip__customerDetails__passenger" *ngFor="let passenger of booking?.passengerDetails">
+        
+      </div>
+    </div>
+  </div>
+</div>

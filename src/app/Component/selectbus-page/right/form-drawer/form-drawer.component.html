@@ -1,0 +1,29 @@
+<button class="proceedButton" (click)="drawer.toggle()">Proceed To Book</button>
+<mat-drawer-container class="example-container" style="height: 100vh;">
+    <mat-drawer #drawer mode="over" position="end"
+      style="width: 100%; max-width: 600px; height: 100vh; padding: 0; background: white;">
+      
+      <div style="height: 100%; display: flex; flex-direction: column;">
+  
+        <!-- Scrollable area -->
+        <div style="flex: 1 1 auto; overflow-y: auto; padding: 16px;">
+          <app-bus-booking-form
+            [selectedseat]="selectedseat"
+            [seatprice]="seatprice"
+            [routedetails]="routedetails"
+            [busid]="busid"
+            [busarrivaltime]="busarrivaltime"
+            [busdeparturetime]="busdeparturetime"
+            [operatorname]="operatorname">
+          </app-bus-booking-form>
+        </div>
+  
+        <!-- Fixed bottom button -->
+        <!--<div style="padding: 16px; border-top: 1px solid #ccc;">
+          <button class="proceedButton">Proceed to Pay</button>
+        </div>-->
+  
+      </div>
+      
+    </mat-drawer>
+  </mat-drawer-container>
